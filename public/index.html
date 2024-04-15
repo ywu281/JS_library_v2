@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Habitat Furniture</title>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Glide Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide@3.3.0/dist/css/glide.theme.min.css">
+
+    <!-- Lightbox JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:400,700&display=swap">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+
+  <body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <!-- Burger Menu -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Logo -->
+         <a class="navbar-brand" href="#">
+          <img src="./assets/images/Habitat-logo-black.webp" alt="Habitat Logo">
+        </a>
+
+        <!-- Main Nav -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop by product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inspiration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Offer</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Us Button -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class="button">Contact us</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="grid-bg">
+      <!-- Hero Banner -->
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide"><img src="./assets/images/banner1.png" alt="Furniture 1"></li>
+              <li class="glide__slide"><img src="./assets/images/banner2.png" alt="Furniture 2"></li>
+              <li class="glide__slide"><img src="./assets/images/banner3.png" alt="Furniture 3"></li>
+            </ul>
+          </div>
+          <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><i class="fas fa-arrow-left"></i></button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fas fa-arrow-right"></i></button>
+          </div>
+         </div>
+
+      <!-- Featured Product Section -->
+      <section class="product-grid container">
+        <div class="title">
+          <h2>Welcome to Habitat</h2>
+          <p>Check out our featured products</p>
+        </div>
+        <div class="product-item">
+          <a href="./assets/images/product1.avif" data-lightbox="products" data-title="Faux Leather and Metal Bar Stool" >
+            <img src="./assets/images/product1.avif" alt="Product 1">
+          </a>
+          <div class="shop-now-button">Shop Now</div>
+        </div>
+        <div class="product-item">
+          <a href="./assets/images/product2.avif" data-lightbox="products" data-title="Green Tea Reed Diffuser">
+            <img src="./assets/images/product2.avif" alt="Product 2">
+          </a>
+          <div class="shop-now-button">Shop Now</div>
+        </div>
+        <div class="product-item">
+          <a href="./assets/images/product3.avif" data-lightbox="products" data-title="Black Wooden Buffet with Glass Doors">
+            <img src="./assets/images/product3.avif" alt="Product 3">
+          </a>
+          <div class="shop-now-button">Shop Now</div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="map-section container">
+        <h2>Our Location</h2>
+        <p>Find a store near you</p>
+        <div id="map" class="map-container"></div>
+      </section>
+
+      <!-- Customers Review Section -->
+      <section class="customers-review">
+        <div class="container">
+          <h2>Customers Review</h2>
+          <p>Check out what our customers have to say about their experience with us.</p>
+
+          <!-- Two Columns -->
+          <div class="row">
+            <!-- Pie Chart -->
+            <div class="col-lg-6">
+              <canvas id="customerSatisfactionChart"></canvas>
+            </div>
+
+            <!-- Positive Comments -->
+            <div class="col-lg-6">
+              <!-- Customer 1 -->
+              <div class="customer-comment">
+                <p>"Great selection of furniture!"</p>
+                <span>- John Chan</span>
+              </div>
+
+              <!-- Customer 2 -->
+              <div class="customer-comment">
+                <p>"I love my new sofa! It's stylish and comfortable."</p>
+                <span>- Jane Smith</span>
+              </div>
+
+              <!-- Customer 3 -->
+              <div class="customer-comment">
+                <p>"Fast delivery and hassle-free assembly. Highly recommend!"</p>
+                <span>- Michael Johnson</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Footer-->
+      <!-- Divider Line -->
+      <hr class="divider-line">
+      <section>
+        <div class="container">
+          <footer class="text-center footer-bg">
+            <div class="container row footer-row">
+              <div class="col-12 col-sm-6 text-center text-sm-left mx-auto">
+                <p class="footer-copy">Copyright © 2024 • Habitat Furniture</p>
+                <p class="footer-copy">All rights reserved</p>
+                <h4 class="footer-email">cs@habitat.com</h4>
+
+                <ul class="nav justify-content-center justify-content-sm-start footer-icon">
+                  <li class="ms-3 mr-3">
+                    <img src="./assets/images/fb.svg" alt="icon" />
+                  </li>
+                  <li class="ms-3 mr-3">
+                    <img src="./assets/images/twitter.svg" alt="icon" />
+                  </li>
+                  <li class="ms-3 mr-3">
+                    <img src="./assets/images/youtube.svg" alt="icon" />
+                  </li>
+                </ul>
+              </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-5 offset-md-1 mb-3 col-6 footer-sub d-none d-sm-block contact-form">
+              <form>
+                <p class="footer-send">Contact us</p>
+                <div class="form-group">
+                  <input id="name" type="text" class="form-control" placeholder="Your name" />
+                </div>
+                <div class="form-group">
+                  <input id="email" type="email" class="form-control" placeholder="E-Mail" />
+                </div>
+                <div class="form-group">
+                  <textarea id="message" class="form-control" placeholder="Leave your message"></textarea>
+                </div>
+                <button class="btn btn-light footer-send" type="button">Send</button>
+              </form>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Initiate Glide -->
+    <!-- <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
+      <script>
+        const config = {
+          type: 'carousel',
+          perView: 1,
+          breakpoint: {
+            800: {
+              perView: 1
+            }
+          }
+        }
+        new Glide('.glide', config).mount()
+      </script>
+
+      <!-- Initiate Lightbox -->
+      <script>
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true,
+          'showImageNumberLabel': false
+        });
+      </script>
+
+      <!-- Initiate Map -->
+      <script>
+        var map = L.map('map').setView([43.6547, -79.3802], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Custom icons for markers
+        var customIcon = L.icon({
+          iconUrl: './assets/images/Location-icon.png',
+          iconSize: [32, 32], // Size of the icon
+          iconAnchor: [16, 32], // Anchor point of the icon (where it is placed on the map)
+          popupAnchor: [0, -32] // Anchor point for popups (relative to the icon's center)
+        });
+
+        // Location Markers
+        var locations = [
+            {
+              name: 'Yorkdale Store',
+              address: '3401 Dufferin St, Old Toronto',
+              coordinates: [43.725006, -79.452225]
+            },
+            {
+              name: 'Eaton Centre Flagship Store',
+              address: '220 Yonge St, Toronto, ON M5B 2H1',
+              coordinates: [43.6547, -79.3802]
+            },
+            {
+              name: 'Yonge Street Store',
+              address: '1290 Yonge St, Toronto, ON M4T 1W6',
+              coordinates: [43.6844, -79.3971]
+            }
+        ];
+        locations.forEach(function (location) {
+      var marker = L.marker(location.coordinates, { icon: customIcon }).addTo(map);
+      marker.bindPopup(`<b>${location.name}</b><br>${location.address}`).openPopup();
+    });
+    </script>
+
+    <!-- Initialize Chart JS -->
+    <script>
+      var ctx = document.getElementById('customerSatisfactionChart').getContext('2d');
+
+      // Define data for the pie chart
+      var data = {
+        labels: ['Excellent', 'Good', 'Neutral'],
+        datasets: [{
+          label: 'Customer Satisfaction',
+          data: [90, 7, 3],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.7)',
+            'rgba(255, 205, 86, 0.7)',
+            'rgba(255, 99, 132, 0.7)'
+          ],
+          borderColor: [
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 205, 86, 1)',
+            'rgba(255, 99, 132, 1)'
+          ],
+          borderWidth: 1
+        }]
+      };
+
+      // Configure options for the pie chart
+      var options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              padding: 20, 
+            },
+          },
+        },
+      };
+
+      // Create the pie chart
+      var customerSatisfactionChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data,
+        options: options
+      });
+    </script>
+
+  </body>
+</html>

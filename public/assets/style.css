@@ -1,0 +1,261 @@
+/* General Styles */
+
+/* Fonts */
+h1, h2, h3, h4, h5, h6,
+p, a, button {
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  padding-top: 56px;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* Navigation Bar */
+.navbar {
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  max-width: 100px;
+}
+
+/* Hero Section */
+.grid-bg {
+  margin-top: 15px;
+}
+.glide {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.glide__slide img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; 
+}
+
+.glide__arrow {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.218);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.glide__arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Featured Product Section */
+.product-grid {
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.product-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.shop-now-button, .button {
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  display: block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  color: rgb(45, 45, 45);
+  border: 2px solid #454545;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.shop-now-button:hover, .button:hover {
+  background-color: #e4e4e4;
+}
+
+/* Map Section */
+.map-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.map-container {
+  width: 100%; 
+  height: 350px; 
+  max-width: 1140px;
+}
+
+/* Customers Review Section */
+.customers-review {
+  padding: 60px 0px 10px 0px;
+}
+
+.customer-comment {
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.customer-comment p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.customer-comment span {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.customers-review .container {
+  text-align: center;
+}
+
+.row {
+  padding-top: 20px;
+  gap: 30px;
+}
+
+/* Footer Section */
+
+.footer-email {
+  font-size: 20px;
+  color: rgb(253, 135, 44);
+}
+
+.footer-icon {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.footer-row {
+  margin: auto;
+}
+
+/* Desktop Version */
+@media screen and (min-width: 992px) {
+  /* Nav */
+  .navbar-brand img {
+    max-width: 150px;
+  }
+
+  /* Hero Section */
+  .glide__arrow {
+    width: 55px;
+    height: 55px;
+  }
+
+  /* Product Section */
+  .title {
+    width: 100%; 
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+  .product-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .shop-now-button, .button {
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    color: rgb(45, 45, 45);
+    border: 2px solid #454545;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .shop-now-button:hover, .button:hover {
+    background-color: #e4e4e4;
+  }
+
+  /* Customer Reivew */
+  .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 0px;
+  }
+
+  /* Footer */
+  .footer-copy,
+  .footer-email {
+    text-align: left !important;
+  }
+
+  .footer-icon {
+    text-align: left !important;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .footer-row {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  /* Contact Form */
+.contact-form {
+  margin-left: 0;
+}
+
+.form-group {
+  margin-bottom: 3px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.footer-sub form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#name,
+#email,
+#message {
+  font-family: 'DM Sans', sans-serif;
+  margin: 3px;
+  padding: 8px;
+  width: 350px;
+  border: 1.5px solid #454545;
+  border-radius: 0px;
+}
+}
